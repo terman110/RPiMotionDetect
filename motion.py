@@ -12,7 +12,7 @@ GPIO.setup(PIR_PIN, GPIO.IN)
 GPIO.setup(RLS_PIN, GPIO.OUT)
 
 def logMsg(msg):
-    print '[' . time.ctime() . '] ' + msg
+    print '[' + time.ctime() + '] ' + msg
 
 def OnMotion(PIR_PIN):
         global last_motion
