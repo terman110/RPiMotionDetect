@@ -24,4 +24,11 @@ Add to crontab
 
 Add line
 
-	@reboot sh /home/pi/projects/RPiMotionDetect/launcher.sh >/home/pi/projects/RPiMotionDetect/log/log.txt 2>&1
+    #-----------------------------------------------------------------
+    # Shell variable for cron
+    SHELL=/bin/bash
+    # PATH variable for cron
+    PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/bin/X11
+    #-----------------------------------------------------------------
+    # m h  dom mon dow   command
+    @reboot sh /home/pi/projects/RPiMotionDetect/launcher.sh >> /home/pi/projects/RPiMotionDetect/log/log.txt 2>&1
